@@ -1,0 +1,102 @@
+def calcul_1():
+ a=num1*num2
+ return a
+ 
+def calcul_2():
+ a=num1/num2
+ return a
+ 
+def calcul_3():
+ a=num1+num2
+ return a
+ 
+def calcul_4():
+ a=num1-num2
+ return a
+
+def calcul_5():
+  a=num1**num2
+  return a
+
+def calcul_6():
+  a=num1**(1./num2)
+  return a
+
+def calcul_7():
+  a=(((num2+1)-(num1))/2)
+  b=(num1+num2)
+  c=a*b
+  return c 
+
+
+print("Welcome to the ReDi advanced calculator")
+print("-------------------------------------------")
+print("You just need to insert 2 numbers and indicate the operator, the rest is done by the calculator :)") 
+print("________________")
+num1=float(input("Please insert 1st number: \n"))
+num2=float(input("Please insert 2nd number: \n"))
+sign=input("Please indicate the operator to apply: + , - , / , * , power , root , sum ||| Please pay attention to the following notes: (a) to calculate power, 1st number is Base and 2nd number is power. (b) to calculate root, 1st number is radicand (i.e. number under radical) and 2nd number is root (e.g. square root or third root) (c)sum accounts for the consecutive sum between 2 numbers (i.e. the sum of numbers between 1-100 (in this example, 1st number is 1 and 2nd number is 100) \n")
+ 
+if (sign == "+"):
+ print(calcul_3())
+elif (sign == "-"):
+ print(calcul_4())
+elif (sign == "*"):
+ print(calcul_1())
+elif (sign == "/"):
+ print(calcul_2())
+elif (sign == "power"):
+ print(calcul_5())
+elif (sign == "root"):
+ print(calcul_6())
+elif (sign == "sum"):
+ print(calcul_7())
+else:
+ print("Please insert only one of the following operators: + , - , / ,* , power , root , sum ")
+
+
+def restart_0():
+ again = input("another operation? If yes, please type y | if no, please type n ")
+ while again == "y":
+   num1=float(input("Please insert 1st number: \n"))
+   num2=float(input("Please insert 2nd number: \n"))
+   sign=input("Please indicate the operator to apply: + , - , / , * , power , root , sum :")
+   if (sign == "+"):
+    aa=num1+num2
+    print(aa)
+   elif (sign == "-"):
+    bb=num1-num2
+    print(bb)
+   elif (sign == "*"):
+    cc=num1*num2
+    print(cc)
+   elif (sign == "/"):
+    dd=num1/num2
+    print(dd)
+   elif (sign == "power"):
+    ee=num1**num2
+    print(ee)
+   elif (sign == "root"):
+    ff=num1**(1./num2)
+    print(ff)
+   elif (sign == "sum"):
+    x=(((num2+1)-(num1))/2)
+    y=(num1+num2)
+    z=x*y
+    print(z)
+   else:
+    print("Please insert only one of the following operators: + , - , / ,* , power , root , sum ")
+   restart_0()
+ if again == "n":
+  print ("|Thank you for using the ReDi calculator|")
+ else:
+  print ("Please only insert y or n") 
+  restart_0()
+
+
+restart_0()
+
+
+
+
+
